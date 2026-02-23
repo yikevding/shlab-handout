@@ -341,6 +341,7 @@ void do_bgfg(char **argv)
             return;
         }
     }
+    // take care of the pid case
     else if (isdigit(id[0]))
     {
         // PID format: 123

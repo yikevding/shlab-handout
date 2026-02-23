@@ -2,12 +2,18 @@
 CS:APP Shell Lab
 ################
 
-To dev locally:
+# To dev locally:
 
-to build the docker: docker build -t shlab-ubuntu .
-to run the docker: docker run -it -v $(pwd):/shlab shlab-ubuntu
+## To build the docker:
 
-add docker to path:
+docker build -t shlab-ubuntu .
+
+## to run the docker:
+
+docker run -it -v $(pwd):/shlab shlab-ubuntu
+
+## add docker to path:
+
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
 # Stop all containers
@@ -45,3 +51,7 @@ myspin.c # Takes argument <n> and spins for <n> seconds
 mysplit.c # Forks a child that spins for <n> seconds
 mystop.c # Spins for <n> seconds and sends SIGTSTP to itself
 myint.c # Spins for <n> seconds and sends SIGINT to itself
+
+# Solution idea
+
+First knockoff the quit case. Follow the order of the trace files. To test correctness of implementation, to run reference solution use `make rtest09`. To run your solution, use `make test09` and compare outputs. You can also run solution interactively using `make` and then do `./tsh`.
